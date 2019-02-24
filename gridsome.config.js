@@ -1,5 +1,7 @@
 const activeEnv = process.env.NODE_ENV || "development"
 
+console.log(activeEnv.toUpperCase())
+
 require("dotenv").config({
   path: `.env.${activeEnv}`,
 })
@@ -17,14 +19,9 @@ module.exports = {
     {
       use: "@gridsome/source-filesystem",
       options: {
-        path: "/blog/**/*.md",
-        route: "/blog/:slug",
+        path: "blog/**/*.md",
+        route: "/:slug",
         typeName: "Post",
-        remark: {
-          plugins: [
-            // ...local plugins
-          ]
-        }
       }
     },
     {
@@ -40,8 +37,8 @@ module.exports = {
               objectID: item.id,
               title: item.title,
               slug: item.slug,
-              modified: item.modified
-            };
+              modified: String(item.modified)
+            }
           }, // optional
           matchFields: ['modified'], // Array<String> required with PartialUpdates
         }],

@@ -9,11 +9,11 @@
   },
   "dependencies": {
     "gridsome": "^0.5.0",
-    "gridsome-plugin-algolia": "^1.1.0"
+    "gridsome-plugin-algolia": "^1.1.4"
   },
   "devDependencies": {
-    "@gridsome/source-filesystem": "^0.1.0",
-    "@gridsome/transformer-remark": "0.0.3",
+    "@gridsome/source-filesystem": "^0.3",
+    "@gridsome/transformer-remark": "^0.2",
     "dotenv": "^6.2.0"
   }
 }

@@ -1,6 +1,5 @@
 <template>
   <Layout :title="$page.post.title">
-    <h2>{{$page.post.title}}</h2>
     <div v-html="$page.post.content"/>
   </Layout>
 </template>
